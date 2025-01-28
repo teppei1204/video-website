@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,800;1,200;1,300;1,400;1,500;1,600&display=swap');
+
 *{
+  font-family: "Poppins", serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;/*flexの横幅に揃える時にレスポンシブに対応しやすい*/
