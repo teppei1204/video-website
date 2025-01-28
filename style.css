@@ -6,3 +6,177 @@
   padding: 0;
   box-sizing: border-box;/*flexの横幅に揃える時にレスポンシブに対応しやすい*/
 }
+
+.showcase{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  background: #111;
+  color: #fff;
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.7s;
+}
+
+.showcase.active{
+  position: absolute;
+  right: 300px;
+}
+
+.showcase header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+}
+
+.toggle{
+  background: url(images/menu.png);
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+}
+
+.toggle.active{
+  background: url(images/close.png);
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+}
+
+.menu{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu ul{
+  list-style: none;
+  font-size: 24px;
+}
+
+.menu ul a{
+  text-decoration: none;
+  color: #111;
+  transition: 0.3s;
+}
+
+.menu ul a:hover{
+  color: aqua;
+}
+
+.showcase video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.text{
+  z-index: 10;
+}
+
+.text h2{
+  font-size: 5em;/*親要素に対する倍率*/
+  font-weight: 800px;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1em;/*親要素に対する倍率*/
+}
+
+.text h3{
+  font-size: 4em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1em;
+}
+
+.text p{
+  font-size: 1.1em;
+  margin: 20px 0;
+  color: #fff;
+  max-width: 700px;
+}
+.text a{
+  display: inline-block;/*指定したHTMLのタグをインラインブロック要素に変更する値*/
+  text-decoration: none;
+  margin-top: 20px;
+  background: #fff;
+  padding: 10px 30px;
+  color: #111;
+  letter-spacing: 2px;/*文字間の広さ*/
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.text a:hover{
+  letter-spacing: 6px;
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: skyblue;
+  mix-blend-mode: overlay;
+}
+
+.social{
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+}
+
+.social li{
+  list-style: none;
+}
+
+.social li a{
+  display: inline-block;
+  margin-right: 20px;
+  transition: 0.3s;
+}
+
+.social li a:hover{
+  transform: translateY(-15px);
+}
+
+@media(max-width: 798px){
+  .showcase,
+  .showcase header{
+    padding: 40px;
+  }
+
+  .text h2{
+    font-size: 3em;
+  }
+  .text h3{
+    font-size: 2em;
+  }
+}
